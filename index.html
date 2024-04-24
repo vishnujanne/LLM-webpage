@@ -1,100 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Delivery Company</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
         }
+
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #ffcc00;
             padding: 10px 0;
-            text-align: center;
         }
-        nav {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #444;
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
-        nav a {
-            color: #fff;
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #333;
             text-decoration: none;
-            margin: 0 10px;
         }
+
         .banner {
-            background-image: url('banner.jpg');
-            background-size: cover;
-            height: 300px;
+            background-color: #f2f2f2;
+            padding: 20px;
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
-        .content {
+
+        .items {
             padding: 20px;
         }
-        .accordion {
-            background-color: #f1f1f1;
-            padding: 10px;
+
+        .item {
             margin-bottom: 20px;
         }
-        .accordion img {
+
+        .item img {
             max-width: 100%;
         }
+
+        .item button {
+            background-color: #ffcc00;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .new-items {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .accordion-btn {
+            background-color: #ffcc00;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin-bottom: 5px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+        }
+
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        footer ul li img {
+            max-width: 30px;
+            max-height: 30px;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Food Delivery Company</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Delivery History</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Signup</a></li>
+                <li><input type="text" placeholder="Search..."></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Account</a>
-        <a href="#">Delivery History</a>
-        <a href="#">Login</a>
-        <a href="#">Signup</a>
-        <input type="text" placeholder="Search...">
-    </nav>
-    <div class="banner">
-        <h2>Welcome to our Food Delivery Service</h2>
-    </div>
-    <div class="content">
+
+    <section class="banner">
+        <h1>Welcome to our Food Delivery Service</h1>
+        <p>Explore our wide range of delicious items and have them delivered to your doorstep.</p>
+    </section>
+
+    <section class="items">
         <h2>Our Menu</h2>
-        <p>Explore our delicious items and add them to your cart.</p>
-        <!-- Sample item -->
         <div class="item">
-            <h3>Item Name</h3>
-            <p>Description of the item.</p>
-            <p>Price: $10</p>
+            <img src="item1.jpg" alt="Item 1">
+            <p>Item 1 Description</p>
             <button>Add to Cart</button>
         </div>
-    </div>
-    <div class="accordion">
-        <h2>New Items</h2>
-        <div>
-            <img src="item1.jpg" alt="New Item 1">
-            <img src="item2.jpg" alt="New Item 2">
-            <img src="item3.jpg" alt="New Item 3">
+        <div class="item">
+            <img src="item2.jpg" alt="Item 2">
+            <p>Item 2 Description</p>
+            <button>Add to Cart</button>
         </div>
-    </div>
+        <!-- Add more items here -->
+    </section>
+
+    <section class="new-items">
+        <h2>New Items</h2>
+        <div class="accordion">
+            <button class="accordion-btn">New Item 1</button>
+            <div class="accordion-content">
+                <img src="newitem1.jpg" alt="New Item 1">
+            </div>
+            <button class="accordion-btn">New Item 2</button>
+            <div class="accordion-content">
+                <img src="newitem2.jpg" alt="New Item 2">
+            </div>
+            <!-- Add more new items here -->
+        </div>
+    </section>
+
     <footer>
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
+        <ul>
+            <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+        </ul>
     </footer>
+
+    <script>
+        // JavaScript code here
+    </script>
 </body>
+
 </html>
